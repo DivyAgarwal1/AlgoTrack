@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/leetcode/:path*",
+      "destination": "https://leetcode.com/:path*"
+    },
+    {
+      "source": "/api/atcoder/:path*",
+      "destination": "https://atcoder.jp/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
