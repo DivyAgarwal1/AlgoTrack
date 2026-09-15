@@ -25,7 +25,7 @@ AlgoTrack is a high-performance, unified dashboard for Competitive Programmers. 
 ## 🚀 Live Demo
 
 Check out the live website here:
-👉 **[https://cp-tracker-teal.vercel.app](https://cp-tracker-teal.vercel.app)**
+👉 **[https://algotrack-app.vercel.app](https://algotrack-app.vercel.app)**
 
 ## 💻 Local Setup Instructions
 
