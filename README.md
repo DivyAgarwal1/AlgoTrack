@@ -1,16 +1,53 @@
-# React + Vite
+# ?? AlgoTrack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AlgoTrack is a high-performance, unified dashboard for Competitive Programmers. It aggregates your live statistics, contest ratings, and recent submissions across **Codeforces**, **LeetCode**, and **AtCoder** into a single, beautiful interface.
 
-Currently, two official plugins are available:
+## ? Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **?? Unified Dashboard:** Track your problem-solving progress and rating changes across multiple competitive programming platforms in one place.
+- **?? 365-Day Activity Heatmap:** A GitHub-style contribution graph that combines your daily problem-solving activity across all platforms.
+- **? Cloud-Synced Bookmarks:** Bookmark interesting problems you find on any platform. Your bookmarks are instantly synced across all your devices using Firebase Firestore.
+- **? Offline-First Architecture:** Built with an advanced Cache-First architecture. Data is stored in your browser's IndexedDB and LocalStorage, bypassing API rate limits and providing instant page loads.
+- **?? Secure Authentication:** OAuth integration powered by Google Firebase.
 
-## React Compiler
+## ??? Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React 19, JavaScript (ES6+)
+- **Build Tool:** Vite
+- **Routing:** React Router v7
+- **Backend / Database:** Firebase Authentication, Firebase Firestore (NoSQL)
+- **Data Visualization:** Recharts
+- **External APIs:** Codeforces REST API, LeetCode GraphQL API, Kenkoooo (AtCoder) API
 
-## Expanding the Oxlint configuration
+## ?? Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+*(Add your Vercel link here once deployed!)*
+`https://your-algotrack-url.vercel.app`
+
+## ?? Local Setup Instructions
+
+If you want to run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/cp-tracker.git
+   cd cp-tracker
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. Open `http://localhost:5173` in your browser.
+
+## ?? Architecture Notes
+
+- **API Caching:** To prevent IP bans from Codeforces and LeetCode, the app uses a custom `localStorage` engine with a 5-minute stale-while-revalidate policy.
+- **Serverless Proxies:** In production, Vercel Serverless Rewrites are used to securely proxy GraphQL requests to LeetCode, bypassing strict CORS policies.
+
