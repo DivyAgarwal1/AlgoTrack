@@ -1,4 +1,7 @@
-# 🚀 AlgoTrack
+<div align='center'>
+  <img src='public/navbar_logo.svg' width='120' alt='AlgoTrack Logo' />
+  <h1>AlgoTrack</h1>
+</div>
 
 AlgoTrack is a high-performance, unified dashboard for Competitive Programmers. It aggregates your live statistics, contest ratings, and recent submissions across **Codeforces**, **LeetCode**, and **AtCoder** into a single, beautiful interface.
 
@@ -21,32 +24,29 @@ AlgoTrack is a high-performance, unified dashboard for Competitive Programmers. 
 
 ## 🚀 Live Demo
 
-*(Add your Vercel link here once deployed!)*
-https://your-algotrack-url.vercel.app
+Check out the live website here:
+👉 **[https://cp-tracker-teal.vercel.app](https://cp-tracker-teal.vercel.app)**
 
 ## 💻 Local Setup Instructions
 
 If you want to run this project locally on your machine:
 
 1. **Clone the repository:**
-   `ash
-   git clone https://github.com/yourusername/cp-tracker.git
+   \ash
+   git clone https://github.com/DivyAgarwal1/cp-tracker.git
    cd cp-tracker
-   `
-
+   \\n
 2. **Install dependencies:**
-   `ash
+   \ash
    npm install
-   `
-
+   \\n
 3. **Start the development server:**
-   `ash
+   \ash
    npm run dev
-   `
-
+   \\n
 4. Open http://localhost:5173 in your browser.
 
 ## 📐 Architecture Notes
 
 - **API Caching:** To prevent IP bans from Codeforces and LeetCode, the app uses a custom localStorage engine with a 5-minute stale-while-revalidate policy.
-- **Serverless Proxies:** In production, Vercel Serverless Rewrites are used to securely proxy GraphQL requests to LeetCode, bypassing strict CORS policies.
+- **Serverless Proxies:** In production, Vercel Serverless Rewrites are used to securely proxy GraphQL requests to LeetCode and AtCoder, bypassing strict CORS policies.
