@@ -6,7 +6,7 @@
  */
 
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes (reduced from 1 hour)
-const CACHE_VERSION = 'v8_';
+const CACHE_VERSION = 'v9_';
 
 function getCached(key) {
   try {
@@ -281,7 +281,7 @@ export async function fetchAtcoderData(handle) {
 
 // ─── ALL UPCOMING CONTESTS ────────────────────────────────────────────────────
 export async function fetchAllContests() {
-  const CACHE_KEY = 'calendar_contests_cache';
+  const CACHE_KEY = CACHE_VERSION + 'calendar_contests_cache';
   const CACHE_TTL = 1000 * 60 * 15; // 15 minutes
   try {
     const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
