@@ -6,7 +6,7 @@
  */
 
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes (reduced from 1 hour)
-const CACHE_VERSION = 'v9_';
+const CACHE_VERSION = 'v10_';
 
 function getCached(key) {
   try {
@@ -332,7 +332,7 @@ export async function fetchAllContests() {
 
   // AtCoder
   try {
-    const acHtml = await fetchWithTimeout('/api/atcoder/contests/').then(r => r.text());
+    const acHtml = await fetchWithTimeout('/api/atcoder/contests').then(r => r.text());
     const parser = new DOMParser();
     const doc = parser.parseFromString(acHtml, 'text/html');
     const upcomingTable = doc.querySelector('#contest-table-upcoming tbody');
