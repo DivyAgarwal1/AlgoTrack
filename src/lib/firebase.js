@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore, enableIndexedDbPersistence } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD_ChyQegjMiV9FMUylKIUF-LssomnbmY4",
-  authDomain: "cp-tracker-6e4a9.firebaseapp.com",
-  projectId: "cp-tracker-6e4a9",
-  storageBucket: "cp-tracker-6e4a9.firebasestorage.app",
-  messagingSenderId: "650644283121",
-  appId: "1:650644283121:web:86719be4b615c5770f1350",
-  measurementId: "G-503YNB0HCQ"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
